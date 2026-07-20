@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Team — GPE Partners</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header scrolled" id="hdr">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="logo-mark.png" alt="GPE Partners"><b>GPE Partners</b></a>
+    <nav class="nav">
+      <a href="strategy.html">Approach</a>
+      <a href="track-record.html">Track Record</a>
+      <a href="team.html">Team</a>
+      <a class="cta" href="mailto:tom.baden@gpe.partners">Get in touch</a>
+    </nav>
+  </div>
+</header>
+
+<section style="padding-top:150px;">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Team</span>
+      <h2 style="margin-top:24px;">Seasoned investors, one focused mandate.</h2>
+      <p>GPE Partners is led by investors with deep experience across global private markets — combining institutional discipline with genuine conviction in the technologies shaping the next decade. Beyond its principals, the firm draws on a network of seasoned investors, operators, and entrepreneurs who have built, scaled, and backed companies across global markets.</p>
+    </div>
+
+    <div class="people">
+
+      <!-- Tom -->
+      <div class="person reveal">
+        <div class="portrait"><img src="img/tom.jpg" alt="Thomas Baden"></div>
+        <div>
+          <div class="role">Founder &amp; Managing Partner</div>
+          <h3>Thomas Baden</h3>
+          <div class="bio">
+            <p>Thomas Baden founded GPE Partners to give family offices, institutions, and sophisticated investors direct access to the highest-quality growth-stage opportunities in deep technology.</p>
+            <p>Tom brings more than 25 years of global private-markets experience and a personal track record of over $650m invested across growth equity, private equity, and venture capital. Thomas leads the firm's investment strategy and sits on the investment committee for every transaction.</p>
+          </div>
+          <div class="meta">
+            <div class="chips">
+              <span class="chip">Neventa Capital</span>
+              <span class="chip">Sailing Capital</span>
+              <span class="chip">IESE</span>
+            </div>
+            <a class="link" href="https://www.linkedin.com/in/tfb-1/" target="_blank" rel="noopener">LinkedIn →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mac (optional — easy to remove) -->
+      <div class="person reveal">
+        <div class="portrait"><img src="img/mac.jpg" alt="MacGregor McGehee"></div>
+        <div>
+          <div class="role">Principal</div>
+          <h3>MacGregor McGehee</h3>
+          <div class="bio">
+            <p>MacGregor McGehee is a growth-equity investor with experience investing in technology companies in the United States, Europe, and emerging markets.</p>
+            <p>MacGregor works across sourcing, diligence, and execution, and supports the firm's investor relationships.</p>
+          </div>
+          <div class="meta">
+            <div class="chips">
+              <span class="chip">Neventa Capital</span>
+              <span class="chip">Amakor Capital</span>
+              <span class="chip">LSE</span>
+            </div>
+            <a class="link" href="https://www.linkedin.com/in/macgregor-mcgehee-531379197/" target="_blank" rel="noopener">LinkedIn →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="fbrand"><img src="logo-mark.png" alt="GPE Partners"><span class="ft"><b>GPE Partners</b><small>Geneva Private Equity Partners</small></span></div>
+    <div class="fcol"><h4>Offices</h4><p>Geneva &amp; Hong Kong</p></div>
+    <div class="fcol"><h4>Contact</h4><a href="mailto:tom.baden@gpe.partners">tom.baden@gpe.partners</a></div>
+    <div class="fcol"><h4>Navigate</h4><a href="index.html">Home</a><a href="strategy.html">Approach</a><a href="track-record.html">Track Record</a></div>
+  </div>
+  <div class="wrap">
+    <p class="foot-legal">© 2026 GPE Partners · All rights reserved. This website is for information purposes only and does not constitute an offer, solicitation, or recommendation to buy or sell any financial instrument. Investment activity is reserved to qualified and professional investors. GPE Partners is not subject to the supervision of the Swiss Financial Market Supervisory Authority. [Legal notice &amp; privacy policy to be finalised.]</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var hdr = document.getElementById('hdr');
+  function onScroll(){ if (window.scrollY > 40) hdr.classList.add('scrolled'); else hdr.classList.remove('scrolled'); }
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) { els.forEach(function(e){e.classList.add('in');}); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, {threshold: 0.1, rootMargin: '0px 0px -6% 0px'});
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+
+</body>
+</html>
