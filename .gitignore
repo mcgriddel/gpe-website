@@ -1,0 +1,4 @@
+_*.png
+_*.jpg
+img/_*.jpg
+.DS_Store
