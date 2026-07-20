@@ -168,9 +168,7 @@ section{ position:relative; padding:clamp(58px,7vw,100px) 0; }
 .site-footer .wrap{ display:flex; justify-content:space-between; align-items:flex-start; gap:48px; flex-wrap:wrap; }
 .site-footer .fbrand{ display:flex; align-items:center; gap:14px; }
 .site-footer .fbrand img{ height:34px; width:auto; opacity:0.95; }
-.site-footer .fbrand .ft{ display:flex; flex-direction:column; gap:5px; }
-.site-footer .fbrand .ft b{ font-family:var(--sans); font-weight:700; font-size:15px; letter-spacing:0.14em; text-transform:uppercase; color:#f2f3f6; line-height:1; }
-.site-footer .fbrand .ft small{ font-family:var(--mono); font-size:9px; letter-spacing:0.16em; text-transform:uppercase; color:var(--dim); line-height:1; }
+.site-footer .fbrand b{ font-family:var(--sans); font-weight:700; font-size:16px; letter-spacing:0.14em; text-transform:uppercase; color:#f2f3f6; }
 .site-footer .fcol h4{ font-family:var(--mono); font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--dim); font-weight:400; margin-bottom:14px; }
 .site-footer .fcol p, .site-footer .fcol a{ font-size:14.5px; color:var(--mut); line-height:1.9; display:block; }
 .site-footer .fcol a:hover{ color:#fff; }
