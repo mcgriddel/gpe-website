@@ -70,7 +70,7 @@ h1,h2,h3{ font-weight:600; letter-spacing:-0.02em; line-height:1.05; }
 .nav a.cta:hover{ border-color:#fff; color:#fff; }
 
 /* ---- hero ----------------------------------------------------------- */
-.hero{ position:relative; min-height:100svh; display:flex; flex-direction:column; justify-content:space-between; overflow:hidden; }
+.hero{ position:relative; min-height:100svh; display:flex; flex-direction:column; justify-content:flex-start; overflow:hidden; }
 .hero.compact{ min-height:74svh; justify-content:center; }
 .hero .img{ position:absolute; inset:0; z-index:0; background:url('img/hero.jpg') center/cover no-repeat;
   animation:kenburns 44s ease-in-out infinite alternate; }
@@ -79,7 +79,7 @@ h1,h2,h3{ font-weight:600; letter-spacing:-0.02em; line-height:1.05; }
   background:
     linear-gradient(90deg, rgba(9,10,14,0.96) 0%, rgba(9,10,14,0.85) 34%, rgba(9,10,14,0.45) 64%, rgba(9,10,14,0.32) 100%),
     linear-gradient(0deg, rgba(9,10,14,0.92) 0%, transparent 24%); }
-.hero .wrap{ position:relative; z-index:2; width:100%; padding-top:clamp(98px,9vh,120px); padding-bottom:48px; }
+.hero > .wrap{ position:relative; z-index:2; width:100%; padding-top:clamp(98px,9vh,120px); padding-bottom:clamp(150px,20vh,210px); }
 .hero .eyebrow{ margin-bottom:32px; }
 .hero h1{ font-size:clamp(40px,6.2vw,84px); max-width:15ch; text-wrap:balance; color:#f6f7fb; }
 .hero h1 span{ color:var(--mut); }
