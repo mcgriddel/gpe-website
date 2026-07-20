@@ -119,20 +119,6 @@ section{ position:relative; padding:clamp(58px,7vw,100px) 0; }
 .srow h3{ font-size:clamp(20px,2.4vw,26px); font-weight:600; color:#eef0f4; }
 .srow p{ color:var(--mut); font-size:15px; line-height:1.55; }
 
-/* ---- mandate (typographic) ------------------------------------------ */
-.mandate .wrap{ max-width:900px; }
-.mandate .eyebrow{ margin-bottom:30px; }
-.mandate .stmt{ font-size:clamp(28px,4.4vw,50px); font-weight:600; letter-spacing:-0.025em; line-height:1.14; color:#f4f5f8; text-wrap:balance; }
-.mandate .stmt b{ color:var(--fg); }
-.mandate .stmt .g{ color:var(--mut); font-weight:600; }
-
-/* ---- image divider -------------------------------------------------- */
-.divider{ position:relative; height:clamp(360px,54vw,600px); overflow:hidden; }
-.divider .img{ position:absolute; inset:0; background:url('img/band.jpg') center 42%/cover no-repeat; }
-.divider .scrim{ position:absolute; inset:0; background:linear-gradient(0deg, rgba(9,10,14,0.85), rgba(9,10,14,0.15) 45%, rgba(9,10,14,0.5)); }
-.divider .cap{ position:absolute; left:var(--gutter); bottom:26px; z-index:2;
-  font-family:var(--mono); font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--mut); }
-
 /* ---- criteria ------------------------------------------------------- */
 .criteria{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(28px,5vw,68px); margin-top:60px; }
 .crit .n{ font-family:var(--mono); font-size:12px; letter-spacing:0.1em; color:var(--dim); }
@@ -147,21 +133,7 @@ section{ position:relative; padding:clamp(58px,7vw,100px) 0; }
 .stage.on{ color:var(--bg); background:var(--fg); border-color:var(--fg); font-weight:500; }
 .ladder-cap{ margin-top:22px; font-family:var(--mono); font-size:12.5px; color:var(--dim); letter-spacing:0.02em; }
 
-/* ---- track record wall ---------------------------------------------- */
-.logos{ margin-top:58px; display:grid; grid-template-columns:repeat(6,1fr);
-  border-top:1px solid var(--line2); border-left:1px solid var(--line2); }
-.logo{ border-right:1px solid var(--line2); border-bottom:1px solid var(--line2); aspect-ratio:5/3;
-  display:flex; align-items:center; justify-content:center; padding:14px; text-align:center;
-  font-size:15.5px; font-weight:500; letter-spacing:-0.01em; color:#a9afba; transition:color .2s ease, background .2s ease; }
-.logo:hover{ color:#fff; background:rgba(255,255,255,0.03); }
 .note{ margin-top:24px; font-family:var(--mono); font-size:11.5px; color:var(--dim); letter-spacing:0.03em; }
-
-/* ---- contact -------------------------------------------------------- */
-.contact{ text-align:center; }
-.contact h2{ font-size:clamp(30px,4.4vw,54px); color:#f4f5f8; max-width:24ch; margin:22px auto 0; text-wrap:balance; }
-.contact .email{ display:inline-block; margin-top:38px; font-family:var(--mono); font-size:clamp(16px,1.8vw,21px);
-  color:var(--fg); border-bottom:1px solid var(--line); padding-bottom:8px; letter-spacing:0.02em; transition:border-color .2s, color .2s; }
-.contact .email:hover{ border-color:#fff; color:#fff; }
 
 /* ---- footer --------------------------------------------------------- */
 .site-footer{ border-top:1px solid var(--line2); padding:74px 0 48px; background:var(--panel); }
@@ -195,10 +167,8 @@ section{ position:relative; padding:clamp(58px,7vw,100px) 0; }
   .srow{ grid-template-columns:44px 1fr; }
   .srow p{ grid-column:2; }
   .ladder{ grid-template-columns:repeat(3,1fr); }
-  .logos{ grid-template-columns:repeat(3,1fr); }
 }
 @media (max-width:520px){
-  .logos{ grid-template-columns:repeat(2,1fr); }
   .ladder{ grid-template-columns:repeat(2,1fr); }
 }
 
@@ -208,7 +178,6 @@ section{ position:relative; padding:clamp(58px,7vw,100px) 0; }
 .ledger-group > .glabel{ display:flex; align-items:baseline; justify-content:space-between; gap:20px;
   font-family:var(--mono); font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:var(--mut);
   padding-bottom:16px; border-bottom:1px solid var(--line); }
-.ledger-group > .glabel .count{ color:var(--dim); }
 .lhead, .lrow{ display:grid; grid-template-columns:1.4fr 1.7fr 1.15fr 0.95fr; gap:clamp(14px,2.4vw,40px); align-items:baseline; }
 .lhead{ padding:18px 0 16px; border-bottom:1px solid var(--line2); }
 .lhead span{ font-family:var(--mono); font-size:10.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--dim); }
@@ -233,8 +202,6 @@ section{ position:relative; padding:clamp(58px,7vw,100px) 0; }
 .person{ display:grid; grid-template-columns:300px 1fr; gap:clamp(28px,5vw,66px); align-items:start; }
 .person .portrait{ position:relative; aspect-ratio:4/5; border:none; background:none;
   display:flex; align-items:center; justify-content:center; overflow:hidden; }
-.person .portrait .initials{ font-size:66px; font-weight:600; letter-spacing:-0.03em; color:rgba(255,255,255,0.13); }
-.person .portrait .ptag{ position:absolute; left:14px; bottom:13px; font-family:var(--mono); font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:var(--dim); }
 .person .role{ font-family:var(--mono); font-size:12.5px; letter-spacing:0.12em; text-transform:uppercase; color:var(--mut); margin-bottom:12px; }
 .person h3{ font-size:clamp(26px,3vw,36px); font-weight:600; letter-spacing:-0.02em; color:#eef0f4; }
 .person .bio{ margin-top:20px; color:var(--fg-2); max-width:60ch; }
