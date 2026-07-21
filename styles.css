@@ -174,8 +174,6 @@ section{ position:relative; padding:clamp(58px,7vw,100px) 0; }
     color:var(--fg); padding:12px 0; border:none; }
   .nav a.cta{ margin-top:30px; font-family:var(--mono); font-size:13px; font-weight:400; letter-spacing:0.05em;
     border:1px solid var(--line); padding:15px 28px; color:var(--fg); }
-  .facts .wrap{ grid-template-columns:repeat(2,1fr); }
-  .fact:nth-child(3){ border-left:none; }
   .two-col{ grid-template-columns:1fr; gap:30px; }
   .criteria{ grid-template-columns:1fr; gap:30px; }
   .srow{ grid-template-columns:44px 1fr; }
@@ -184,6 +182,10 @@ section{ position:relative; padding:clamp(58px,7vw,100px) 0; }
 }
 @media (max-width:520px){
   .ladder{ grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width:600px){
+  .facts .wrap{ grid-template-columns:repeat(2,1fr); }
+  .fact:nth-child(3){ border-left:none; }
 }
 
 /* ---- track-record ledger (dedicated page) --------------------------- */
