@@ -4,13 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Team — GPE Partners</title>
-<link rel="stylesheet" href="styles.css?v=8">
+<link rel="stylesheet" href="styles.css?v=9">
 </head>
 <body>
 
 <header class="site-header scrolled" id="hdr">
   <div class="wrap">
     <a class="brand" href="index.html"><img src="logo-mark.png" alt="GPE Partners"><b>GPE Partners</b></a>
+    <button class="menu-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav class="nav">
       <a href="strategy.html">Investment Strategy</a>
       <a href="track-record.html">Track Record</a>
@@ -95,6 +96,16 @@
   var hdr = document.getElementById('hdr');
   function onScroll(){ if (window.scrollY > 40) hdr.classList.add('scrolled'); else hdr.classList.remove('scrolled'); }
   onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+  var mt = document.querySelector('.menu-toggle');
+  if (mt) {
+    mt.addEventListener('click', function(){
+      var open = hdr.classList.toggle('nav-open');
+      mt.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    hdr.querySelectorAll('.nav a').forEach(function(a){
+      a.addEventListener('click', function(){ hdr.classList.remove('nav-open'); mt.setAttribute('aria-expanded','false'); });
+    });
+  }
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var els = document.querySelectorAll('.reveal');
   if (reduce || !('IntersectionObserver' in window)) { els.forEach(function(e){e.classList.add('in');}); return; }
