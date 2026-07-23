@@ -149,10 +149,7 @@ section{ position:relative; padding:clamp(58px,7vw,100px) 0; }
 .site-footer .fcol h4{ font-family:var(--mono); font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--dim); font-weight:400; margin-bottom:14px; }
 .site-footer .fcol p, .site-footer .fcol a{ font-size:14.5px; color:var(--mut); line-height:1.9; display:block; }
 .site-footer .fcol a:hover{ color:#fff; }
-.foot-bio{ margin-top:54px; padding-top:26px; border-top:1px solid var(--line2);
-  font-size:14.5px; color:var(--fg-2); line-height:1.75; max-width:70ch; }
-.foot-bio b{ color:var(--fg); font-weight:600; }
-.foot-legal{ margin-top:26px; padding-top:0; border-top:none;
+.foot-legal{ margin-top:54px; padding-top:26px; border-top:1px solid var(--line2);
   font-family:var(--mono); font-size:11.5px; color:var(--dim); line-height:1.8; max-width:100ch; letter-spacing:0.01em; }
 
 /* ---- reveal --------------------------------------------------------- */
